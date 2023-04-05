@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icon-hover-3d-effect</title>
+    <style>
+        a {
+            height: 150px;
+            width: 150px;
+            background: lightcoral;
+            display: block;
+            margin: 250px auto;
+            text-align: center;
+            line-height: 150px;
+            position: relative;
+            transition: 1s;
+            transform-style: preserve-3d;
+            font-size: 30px;
+            color: #000;
+        }
+        
+        .front {
+            height: 150px;
+            width: 150px;
+            background: lightgreen;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateZ(75px);
+        }
+        
+        .back {
+            height: 150px;
+            width: 150px;
+            background: lightseagreen;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateX(90deg) translateZ(75px);
+        }
+        
+        a:hover {
+            transform: rotateX(-90deg) translateZ(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="">
+        <div class="front">front</div>
+        <div class="back">back</div>
+    </a>
+</body>
+
+</html>
